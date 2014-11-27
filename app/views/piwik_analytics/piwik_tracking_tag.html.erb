@@ -2,9 +2,12 @@
 <script type="text/javascript">
   var pkBaseURL = (("https:" == document.location.protocol) ? "https://<%= url %>/" : "http://<%= url %>/");
   document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-  </script><script type="text/javascript">
+</script><script type="text/javascript">
   try {
     var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", <%= id_site %>);
+    <% unless id_user.nil? %>
+      piwikTracker.setUserId('<%= id_user %>');
+    <%end%>
     piwikTracker.trackPageView();
     piwikTracker.enableLinkTracking();
   } catch( err ) {}

@@ -1,6 +1,9 @@
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
+  <% unless id_user.nil? %>
+    _paq.push(['setUserId', '<%=id_user%>']);
+  <%end%>
   (function(){
     var u=(("https:" == document.location.protocol) ? "https://<%= url %>/" : "http://<%= url %>/");
     _paq.push(['setSiteId', <%= id_site %>]);
