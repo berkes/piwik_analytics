@@ -1,6 +1,8 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "debugger"
+group :development do
+  gem "debugger"
+end
 
 gemspec
