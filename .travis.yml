@@ -2,3 +2,4 @@ language: ruby
 rvm:
   - 1.9.3
 cache: bundler
+bundler_args: --without production --without development
