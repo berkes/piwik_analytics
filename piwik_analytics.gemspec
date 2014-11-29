@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = 'piwik_analytics'
-  s.version           = '1.0.1'
+  s.version           = '1.0.2'
   s.date              = Time.now.strftime "%Y-%m-%d"
   s.author            = 'Fabian Becker'
   s.email             = 'halfdan@xnorfz.de'
@@ -20,5 +20,7 @@ spec = Gem::Specification.new do |s|
   s.add_runtime_dependency 'rails', '>= 3.0.0'
   s.add_dependency 'actionpack'
   s.add_dependency 'activesupport'
+
+  s.add_development_dependency "rspec", "~> 2.12.0"
 end
 
